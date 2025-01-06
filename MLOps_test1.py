@@ -9,7 +9,6 @@ st.title('Titanic passengers survival prediction')
 st.write('This is a simple example of a Machine Learning model deployment using Streamlit.')
 
 
-
 user_input_pclass = st.selectbox('Pclass', [1, 2, 3])
 user_input_sex = st.selectbox('Sex', ['Male', 'Female'])
 user_input_age = st.number_input('Age', min_value=0, max_value=100, value=30)
