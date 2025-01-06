@@ -16,7 +16,8 @@ user_input_age = st.number_input('Age', min_value=0, max_value=100, value=30)
 
 rfclf = pickle.load(open('rfclf.pkl', 'rb'))
 def predict():
-    data = [[user_input_pclass,user_input_sex, user_input_age, 1,0,0,1,0]]
+    encode_dict = {'Male' : 0, 'Female' : 1}
+    data = [[user_input_pclass,encode_dict[user_input_sex], user_input_age, 1,0,0,1,0]]
 
     result = rfclf.predict(data)
 
